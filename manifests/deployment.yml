@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: guoyanzhoupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: guoyanzhoupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: guoyanzhoupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: guoyanzhoupipelinesjavascriptdocker 
+          image: qtacr.azurecr.io/guoyanzhoupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
